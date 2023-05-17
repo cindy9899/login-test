@@ -21,7 +21,7 @@
     </li>
 </ul>
 <h3>파일 git 저장소에 올리는 방법</h3>
-<h5>git add . 명령어로 파일추가 > git status로 상태 확인 > git commit "init" 내용 저장 > git push origin main > 내용 업로드<br />
+<h5>git add . 명령어로 파일추가 > git status로 상태 확인 > git commit -m "init" 내용 저장 > git push origin main > 내용 업로드<br />
 </h5>
 <h3>파일 git 저장소에 다운하는 방법</h3>
 <h5>git clone https://github.com/bingual/RedAccount.git 명령어로 원하는 폴더에 저장 > 현재 프로젝트 폴더에서 yarn install로 node-module
