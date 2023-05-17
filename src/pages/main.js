@@ -133,10 +133,12 @@ export default function Main(){
             </div>
             <Bottom_footer />
             <Footer />    
+
+            {/* #include virtual="/inc/bottom_footer.asp" */}
+            {/* #include virtual="/inc/footer.asp" */}      
         </>
     )
 }
 
-{/* #include virtual="/inc/bottom_footer.asp" */}
-{/* #include virtual="/inc/footer.asp" */}
+
 

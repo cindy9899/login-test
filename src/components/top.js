@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 import Calculate_list from 'pages/calculate_list';
 
 export default function Top(){
@@ -49,7 +49,7 @@ export default function Top(){
                                 </li>
                                 
                                 <li className="">
-                                    <Link href="/board/board_faq_list" className="nav_link">1:1문의</Link>
+                                    <Link href="/board_faq/board_faq_list" className="nav_link">1:1문의</Link>
                                 </li>
                                 
                                 <li className="top_link_r">

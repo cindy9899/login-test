@@ -22,7 +22,7 @@ export default function Board_faq(){
 						<h2 className="page_title">1:1문의하기</h2>
 					</div>
 
-					<form action="/board/board_faq_list">
+					<form action="/board_faq/board_faq_list">
 						<div className="simplepay_form notice_from">	
 							<dl>
 								<dt>제목</dt>

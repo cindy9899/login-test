@@ -4,7 +4,7 @@ import Page_menu from "components/page_menu";
 import Top from "components/top";
 import Link from "next/link";
 
-export default function Board_faq(){
+export default function Board_faq_list(){
     return(
         <>
             {/* <!--#include virtual="/inc/header.asp"-->
@@ -26,7 +26,7 @@ export default function Board_faq(){
 
                     <div className="notice_wrap">	
                     
-                        <Link href="/board/board_faq_view">
+                        <Link href="/board_faq/board_faq_view">
                             <dl className="faq_listwrap">
                                 <dt>
                                     <span>02</span>1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건
@@ -37,7 +37,7 @@ export default function Board_faq(){
                             </dl>	
                         </Link>
 
-                        <Link href="/board/board_faq_view">
+                        <Link href="/board_faq/board_faq_view">
                             <dl className="faq_listwrap">
                                 <dt>
                                     <span>01</span>1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건
@@ -50,7 +50,7 @@ export default function Board_faq(){
                     </div>
 
                     <div className="btn_wrap list_btnw">
-                        <Link href="/board/board_faq" className="la_btn list_btn">문의하기</Link>
+                        <Link href="/board_faq/board_faq" className="la_btn list_btn">문의하기</Link>
                     </div>
                     <div className="pageing">
                         <Link href="" alt="" title="첫 페이지이동">&lt;&lt;</Link>
@@ -73,7 +73,7 @@ export default function Board_faq(){
 
                     <div className="notice_wrap">	
                     
-                        <Link href="/board/board_faq_view">
+                        <Link href="/board_faq/board_faq_view">
                             <dl className="faq_listwrap">
                                 <dt>
                                     <span>02</span>1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건
@@ -84,7 +84,7 @@ export default function Board_faq(){
                             </dl>	
                         </Link>
 
-                        <Link href="/board/board_faq_view">
+                        <Link href="/board_faq/board_faq_view">
                             <dl className="faq_listwrap">
                                 <dt>
                                     <span>01</span>1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건1회 카드결제 승인금액 조정건
@@ -97,7 +97,7 @@ export default function Board_faq(){
                     </div>
 
                     <div className="btn_wrap list_btnw">
-                        <Link href="/board/board_faq" className="la_btn list_btn">문의하기</Link>
+                        <Link href="/board_faq/board_faq" className="la_btn list_btn">문의하기</Link>
                     </div>
                     <div className="pageing">
                         <Link href="" alt="" title="첫 페이지이동">&lt;&lt;</Link>

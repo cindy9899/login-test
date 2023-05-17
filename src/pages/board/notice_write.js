@@ -59,7 +59,7 @@ export default function Notice_write(){
                                         
                         <div className="btn_wrap">
                             <button type="submit" className="la_btn modifysend_btn">저장하기</button> 
-                            <Link href="notice_list.asp" className="la_btn">목록으로</Link>
+                            <Link href="/main" className="la_btn">목록으로</Link>
                         </div>
                     </form>
                 </section>                

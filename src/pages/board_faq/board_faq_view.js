@@ -123,7 +123,7 @@ export default function Board_faq_view(){
 						</div>
 
 						<div className="btn_wrap">
-							<Link href="/board/board_faq_list" className="la_btn">목록으로</Link>
+							<Link href="/board_faq/board_faq_list" className="la_btn">목록으로</Link>
 						</div>
 					</form>
 				</section>

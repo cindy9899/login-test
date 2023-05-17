@@ -151,8 +151,7 @@ export default function Myinfo(){
             <Footer />
 
             {/* <!--#include virtual="/inc/bottom_footer.asp"-->
-            <!--#include virtual="/inc/footer.asp"--> */}
-                        
+            <!--#include virtual="/inc/footer.asp"--> */}                        
         </>
     )
 }
