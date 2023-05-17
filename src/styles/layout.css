@@ -1,0 +1,249 @@
+
+/*layout*/
+#header{width:100%; margin-top:-20px;}
+#footer{text-align:center;margin:2rem 0px; }
+.row, .row-wrap, .row-swrap, .row-form{display: flex; flex-wrap: wrap;display: -webkit-box;display: -ms-flexbox; -ms-flex-wrap: wrap;padding-left:0px;padding-right:0px;}
+.row, .row-wrap{margin-left:-2.5px;margin-right:-2.5px;}
+.row_bor{border-top:1px solid #ededed;padding-top:1.2rem;margin-top:1.8rem;}
+.col-md-1{flex: 0 0 15%;max-width: 15%;}
+.col-md-2{flex: 0 0 20%;max-width: 20%;}
+.col-md-3{flex: 0 0 25%;max-width: 25%;}
+.col-md-4{flex: 0 0 33.3333%;max-width: 33.3333%;}
+.col-md-6{flex: 0 0 50%;max-width: 50%;}
+.col-md-7{flex: 0 0 70%;max-width: 70%;}
+.col-md-8{flex: 0 0 55%;max-width: 55%;}
+.col-md-9{flex: 0 0 75%;max-width: 75%;}
+.col-md-10{flex: 0 0 80%;max-width: 80%;}
+.col-md-11{flex: 0 0 85%;max-width: 85%;}
+.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-12{padding-left:2.5px;padding-right:2.5px;}
+.col-12{flex: 0 0 100%;max-width: 100%;}
+.col-lg-5{flex: 0 0 45%;max-width: 45%;  height: 100%;}
+.col-lg-7{flex: 0 0 55%;max-width: 55%;  height: 100%;}
+
+/*.col-lg-5{display: table-cell;width:40%;}
+.col-lg-7{display: table-cell;width:60%;}*/
+/*메인레이아웃*/
+.main_row .col-lg-5 .col-md-6{padding-left:7.5px;padding-right:7.5px;}
+.main_row .col-12{padding-left:7.5px;padding-right:7.5px;}
+/*검색조건*/
+.whn70{margin-top: 10px;}
+.whn70 input{float:left;width:70%;}
+.whn70 button{float:left;width: calc(30% - 5px);margin-left:5px;}
+/*검색조건*/
+.wh70 input{float:left;width:70%;}
+.wh70 button{float:left;width: calc(30% - 5px);margin-left:5px;}
+.search_ba{margin-top: 10px;}
+
+@media (max-width:1600px){
+    .col-lg-5{flex: 0 0 50%;max-width: 50%;  height: 100%;}
+    .col-lg-7{flex: 0 0 50%;max-width: 50%;  height: 100%;}
+}
+
+@media (max-width:1450px){
+    .form_search .col-md-6{flex: 0 0 100%;max-width: 100%;padding-left:0px;padding-right:0px;}
+    .form_search .col-md-6.mt-3{margin-top:1rem;}
+    .form_search .col-md-6.mt-3:first-child{margin-top:0rem;}
+    .form_search .btn_wrap_list{width:49.5% ! important;}
+}
+
+@media (min-width:1230px){
+    /*최근접속시간*/
+   .myinfo_time{position:relative;}
+   .myinfo_time span{text-align:left;}
+   .myinfo_time span.time_text{position:absolute;right:0px;top:0px;}   
+}
+
+
+@media (max-width:1219px){
+    /*메인*/
+    .calendar_wrap .dateBoard div{min-height:3rem;}
+    .col-lg-5{flex: 0 0 100%;max-width: 100%;  height: 100%;}
+    .col-lg-7{flex: 0 0 100%;max-width: 100%;  height: 100%;}
+    /*테이블 스크롤*/
+    .table_wrap{max-width: 1260px;height: 100%;overflow: hidden;overflow-x: scroll;}
+    .offset_wrap{max-width: 1000px;}
+}
+
+@media all and (min-width:993px) and (max-width:1280px){
+    .gnb .top_link_r .nav_link{font-size:0.75rem;}
+    .gnb .nav_link{padding:0px 0.40rem;font-size:0.90rem;}
+}
+
+@media (min-width:901px){
+    #content{margin-top:55px;}
+    .calender_title{display:block;}
+}
+
+@media (max-width:990px){
+    /* 레이아웃글자리셋 */
+   #content{margin-top:15px;}
+   
+    h1, h1 span{font-size:1.9rem;}
+    h2{font-size:1.15rem;}
+    h3{font-size:1.05rem;text-align:left;margin-bottom:0.5rem;margin-top:0px;}
+    h4{font-size:1.05rem;color:#555;}
+    h5{font-size:1.00rem;}
+    h6{font-size:1.00rem;}
+    span{font-size:0.85rem;}
+    li{font-size:0.85rem;}
+    li > a{font-size:0.80rem;}
+    label{font-size:0.85rem;}
+   .row > .col-md-6{flex: 0 0 100%;max-width: 100%;}
+   .col-12{flex: 0 0 100%;max-width: 100%;}
+   .right_btn ul{width:100%;}
+
+}
+
+@media (max-width:933px){
+    form h3:first-child{margin-top:0px;}
+}
+
+
+@media (max-width:858px){
+	/*1:1답변*/
+	.faq_listwrap dt{width:100%;}
+	.faq_listwrap dd{width:100%;display:block;text-align:right;padding-right:5px;}
+	.faq_listwrap dd span:first-child{margin-left:42px;}
+}
+
+@media (max-width:849px){
+    .select{background-size:11px;}
+    .col-0 .select{background-position: 98% 50%;}
+    .select_listnum{background-position: 94% 50%;}
+    .md_wh{float: left; margin:0px 5px;align-items: center;}   
+    .bt{margin-left:0px;}
+}
+
+@media (max-width:767px){
+    /*기본레이아웃*/
+
+    .col-md-6, .col-md-7, .col-md-8, .col-12{flex: 0 0 100%;max-width: 100%;}
+    .form_search .col-md-7, .form_search .col-md-8{margin-top:0.85rem;}
+    .form_search .col-3{flex: 0 0 33.333%;max-width: 33.333%;}
+    .form_search .col-6{flex: 0 0 50%;max-width: 50%;}
+    .mt-3 {margin-top: 0rem ! important;}
+    .search_ba{margin-bottom:0.85rem;}
+
+    /*거래일자-검색*/
+    .form_search .calendar_wrap_list{width:100%;}
+    .form_search .btn_wrap_list{width:100% ! important;margin-top:10px;}
+    .btn_wrap_list{margin-bottom:1.0rem;}
+    /*페이지메뉴*/
+    .page_navs .page_bsub, .page_navs .page_ssub{width: calc(95% - 23px);border-right:none;}
+    .home_ipage img { width: 16px; margin: 1rem 0px 0px 1rem;}
+    .page_navs .page_ssub{border-right:none;}
+    /*테이블 스크롤*/
+    .pay_table, .agency_table, .sum_table, .member_table{width:235%;}
+    .sales_table{width:200%;}
+    .offset_table{width:150%;}
+	.terminal_table{width:250%;}
+    table th{font-size:0.75rem;}
+    table td{font-size:0.70rem;}
+    table th, table td{padding:0.20rem;}
+    /*정보입력란*/
+    .agency_form dl{display: flex;flex-wrap: wrap;display: -webkit-box;display: -ms-flexbox; -ms-flex-wrap: wrap;width:100%;}
+    .agency_form dt{width: calc(85px - 6px);padding-left:0px;}
+    .agency_form dd{padding-right:0px;width: calc(100% - 85px);}
+    .agency_form dl.dl_wh dd:nth-child(3){padding-left:95px;}
+    .agency_form dd > div{width:100%;}
+    .agency_form dd > button{width:95px;}
+    /*메인*/
+    .compay_img, .compay_img img{width:80px;}
+    .service_list{text-align:Center;}
+    .mycharge h5 {margin: 15px 0px 5px 0px;}
+    /*메인-결제서비스*/
+    .circle_blue1{display:none;}
+    .circle_blue2{display:none;}
+    .mt_3{margin-top:1.0rem;}
+    .paybox .today_pay, .paybox .tomorrow_pay, .paybox .cancel_pay {margin-top: 5px;}
+    /*메인달력*/
+    .claendalwrap{max-width: 760px;height: 100%;overflow: hidden;overflow-x: scroll;}
+    .claendal_table{width:200%;}
+}
+
+@media (min-width:640px){
+    /*로그인창*/
+    .login_box{margin:0 auto;max-width:560px;background:#fff;background-size: 90%;width:560px;}
+    .login_wrap{position: absolute;top: 50%;left: 50%; transform: translate(-50%, -50%);}
+	.alert_popup{position:fixed;top: 50%;left: 50%; transform: translate(-50%, -50%);}
+
+	/*계좌발급*/
+	.confirm_box{display: flex; align-items: center; } 
+	.confirm_box li .bt{margin-left:5px;width:calc(100% - 5px);}
+	.confirm_box li.bank_namet{width:30%;}
+	.confirm_box li.banknumber_info{width:calc(70% - 5px);}
+}
+
+@media (max-width:640px){
+    /*레이아웃*/
+    .form_search .col-0{flex: 0 0 100%;max-width: 100%;}
+    .form_search .col-md-11{flex: 0 0 100%;max-width: 100%;margin-top:0.85rem;}
+    /*로그인*/
+    .login_wrap{position: absolute;top:15%;left:0px; transform: translate(0%, 0%);padding-left:15px;padding-right:15px;width:100%;}
+	 .alert_popup{position:fixed;top:25%;left:0px; transform: translate(0%, 0%);padding-left:15px;padding-right:15px;width:100%;}
+
+    /*글자*/
+    .h3_title{padding:0.8rem 0.9em 0.25rem 0.9rem;}
+    .h3_title .more_ba{top:0.6rem;  right: 0.8rem;}
+    .h3_title .more_ba a{font-size:0.75rem;}
+    .h3_title h3{font-size:0.95rem; }
+    h4{font-size:0.85rem;}
+     /*테이블 스크롤*/
+     .offset_wrap{max-width: 1260px;}
+     .offset_table{width:200%;}
+    /*폰트수정*/
+    .number_t {font-size: 1.25rem;}   
+    /*팝업창*/
+    .popup_body{padding:25px 15px;}
+   /*메인- 정산금액현황*/
+   .paybox h4{margin-bottom:0rem;}
+   .paybox{padding:0rem;}
+   .inner_wrap{padding:0.85rem;}
+   .unit{font-size:0.9rem;}
+   .calendar_wrap .dateBoard div p{font-size:0.65rem;}
+   .paybox li span:first-child{font-size:0.95rem;font-weight:500;letter-spacing: 0px;}
+   .paybox li span{font-size:0.85rem;}
+   .paybox li:first-child span:first-child{font-size:1.05rem;font-weight:500;letter-spacing: -1px;}
+   .paybox li:first-child span{font-size:0.85rem;}
+   .paybox .today_pay, .paybox .tomorrow_pay, .paybox .cancel_pay {margin-top:0px;}
+   /*공지사항*/
+   .notice_list{margin-top:0rem;}
+   .confirm_box li{width:100%;}
+
+   /*계좌발급*/
+   .confirm_box li.confirm_bt{width:100%;}
+    .confirm_box li.confirm_bt .bt{margin-left:0px;}
+	.confirm_box li.bank_namet{width:30%;}
+.confirm_box li.banknumber_info{width:calc(70% - 5px);}
+
+   
+}
+
+
+
+@media (max-width:433px){
+    /*페이지메뉴*/
+    .page_nav{height:50px;}
+    .page_navs .page_bsub{width: calc(99.5% - 35px);height:48px;}
+    .psub_menu, .psub_menub{top:48px;}
+    .home_ipage{width:35px;}
+    .home_ipage img { width: 15px; margin: 1.1rem 0px 0px 0.75rem;}
+    .arrow::after{right:10px;width:7px;height:7px;}
+    .page_bsub .dlink, .page_ssub .dlink{font-size:0.8rem;padding:0px 10px 0px 10px;}
+
+    /*검색결제버튼크기*/
+    .right_btn .abt{font-size:0.75rem;padding: 0.60em 0.2em;}
+}
+
+
+@media (max-width:480px){
+.row-swrap .col-md-4{flex: 0 0 100%;max-width: 100%;}
+.paybox:before{background: none;}
+.row-swrap .col-md-4 .paybox{border-top:1px solid #ededed;padding-top:15px;margin-top:15px;}
+.row-swrap .col-md-4 .paybox.line_bnone{border:none;}
+
+}
+    
+@media (max-width:300px){
+   
+}

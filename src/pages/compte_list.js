@@ -1,0 +1,215 @@
+import Bottom_footer from "components/bottom_footer";
+import Footer from "components/footer";
+import Page_menu from "components/page_menu";
+import Top from "components/top";
+import Link from "next/link";
+
+export default function Compte_list() {
+    return(
+        <>
+            {/* <!--#include virtual="/inc/header.asp"-->
+            <!--#include virtual="/inc/top.asp"--> */}
+            
+            <Top />            
+
+            <div id="content" className="container">
+                {/* <!-- 페이지메뉴 -->
+                <!--#include virtual="/inc/page_menu.asp"--> */}
+
+            <Page_menu />
+
+                <section className="borderbox">
+                    <div className="title_wrap">
+                        <h2 className="page_title">계좌출금내역</h2>
+                    </div>
+                
+                    <form onSubmit={(e) => e.preventDefault()}>
+                        <div className="row form_search">
+                            <div className="col-md-6 mt-3">
+                                <div className="row-wrap">
+                                    <div className="col-12">
+                                        <label className="label_title" htmlFor="">등록일자</label>
+                                    </div>
+                                
+                                        <ul className="calendar_wrap_list">
+                                            <li className="li_can">
+                                                <input type="date" className="input" title="일자선택" />
+                                            </li>
+                                            <li className="ih-lin">~</li>
+                                            <li className="li_can">
+                                                <input type="date"  className="input" title="일자선택" />
+                                            </li>
+                                        </ul>
+                                        <ul className="btn_wrap_list">
+                                            <li className="md_wh">
+                                                <button 
+                                                    type="submit" className="bt" onClick={()=>{}}>
+                                                        오늘
+                                                </button>
+                                            </li>
+                                            <li className="md_wh">
+                                                <button 
+                                                    type="submit" className="bt" onClick={()=>{}}>
+                                                        어제
+                                                </button>
+                                            </li>
+                                            <li className="md_wh">
+                                                <button 
+                                                    type="submit" className="bt" onClick={()=>{}}>
+                                                        3일전
+                                                </button>
+                                            </li>
+                                            <li className="md_wh">
+                                                <button 
+                                                    type="submit" className="bt" onClick={()=>{}}>
+                                                        한달전
+                                                </button>
+                                            </li>
+                                            <li className="md_wh">
+                                                <button type="submit" className="bt" onClick={()=>{}}>
+                                                    당월
+                                                </button>
+                                            </li>
+                                        </ul>    
+                                </div>
+                            </div>
+                        
+                            <div className="col-md-6 mt-3">
+                                <div className="row-wrap">
+                                    <div className="col-0 col-md-1">
+                                        <label htmlFor="">검색조건</label>
+                                        <select name="" className="select">
+                                            <option>에금주명</option>
+                                            <option>계좌번호</option>
+                                            <option>은행</option>
+                                        </select>
+                                    </div>
+
+                                    <div className="col-md-11">
+                                        <label htmlFor="" className="m_t2">검색입력</label>
+                                        <div className="search_ba wh70">
+                                            <input type="search" className="input" placeholder="검색어를 직접 입력해주세요." />
+                                            <button type="submit" className="bt blue_bgbor">검색</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="right_btn">
+                            <ul>
+                                <li>
+                                    <button 
+                                        type="submit" 
+                                        className="abt green_sbt" 
+                                        onClick={()=>{}} 
+                                        alt="다운로드" 
+                                        tltie="엑셀다운로드하기">
+                                            Excal
+                                    </button>
+                                </li>
+                                <li>
+                                    <button 
+                                        type="submit" 
+                                        className="abt gray_sbt" 
+                                        onClick={()=>{}}>
+                                            목록
+                                    </button>
+                                </li>
+                                <li> 
+                                    <select name="" className="select select_listnum">
+                                        <option defaultValue>10건</option>
+                                        <option>15건</option>
+                                        <option>20건</option>
+                                        <option>30건</option>
+                                        <option>40건</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>                
+                </section>
+
+               <section className="borderbox_table">
+                    <div className="table_wrap">                                                
+                        <table className="pay_table" width="100%">
+                            <caption>계좌 입금조회</caption>
+                            <colgroup> 
+                                <col className="col2_num" />
+                                <col className="time_col" />
+                                <col className="wh_55" />
+                                <col className="col" />
+                                <col className="col_company" />
+                                <col className="col_company" />
+                                <col className="col" />
+                                <col className="col" />
+                                <col className="col" />
+                                <col className="col" />
+                            </colgroup>
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">거래번호</th>
+                                    <th scope="col">예금주명</th>
+                                    <th scope="col">은행</th>
+                                    <th scope="col">계좌번호</th>
+                                    <th scope="col">출금신청금액</th>
+                                    <th scope="col">상태</th>
+                                    <th scope="col">금액</th>
+                                    <th scope="col">출금신청 일시</th>
+                                    <th scope="col">응답완료 일시</th>
+                                </tr> 
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td className="time_t">20230302000001</td>
+                                    <td>김정산</td>
+                                    <td>우리은행</td>
+                                    <td>1003745866224</td>
+                                    <td className="pay_t tr_l">100,000원</td>
+                                    <td className="pay_t green_t">출금신청</td>
+                                    <td className="pay_t tr_l">100,000,000원</td>
+                                    <td className="time_t">2022-11-23 13:34:03</td>
+                                    <td className="time_t">2022-11-23 13:34:03</td>
+                                </tr> 
+
+                                <tr>
+                                    <td>1</td>
+                                    <td className="time_t">20230302000001</td>
+                                    <td>김정산</td>
+                                    <td>우리은행</td>
+                                    <td>1003745866224</td>
+                                    <td className="pay_t tr_l">200,000원</td>
+                                    <td className="pay_t red_t">출금완료</td>
+                                    <td className="pay_t tr_l">4,000,000원</td>
+                                    <td className="time_t">2022-11-23 13:34:03</td>
+                                    <td className="time_t">2022-11-23 13:34:03</td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="pageing">
+                        <Link href="" alt="" title="첫 페이지이동">&lt;&lt;</Link>
+                        <Link href="" title="다음 페이지이동">&lt;</Link>
+                        <Link href="" className="on">1</Link>
+                        <Link href="">2</Link>
+                        <Link href="">3</Link>
+                        <Link href="">4</Link>
+                        <Link href="">5</Link>
+                        <Link href="" title="이전 페이지이동">&gt;</Link>
+                        <Link href="" title="마지막 페이지이동">&gt;&gt;</Link>
+                    </div>
+                </section>
+            </div>
+            
+            <Bottom_footer />
+            <Footer />          
+
+            {/* /* <!--#include virtual="/inc/bottom_footer.asp"-->
+            <!--#include virtual="/inc/footer.asp"-->            */}
+        </>
+    )
+}
