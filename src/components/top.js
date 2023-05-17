@@ -11,7 +11,7 @@ export default function Top(){
                         <h1 className="top-logo">
                             <Link href="/main">
                                 <span>
-                                    <img src="/img/logo.svg" alt="" className="logo_img"/>
+                                    <img src="/img/logo.svg" alt="" className="logo_img" />
                                 </span>
                                 <span>Red Account</span>
                             </Link>
@@ -49,15 +49,15 @@ export default function Top(){
                                 </li>
                                 
                                 <li className="">
-                                    <Link href="/board_faq_list" className="nav_link">1:1문의</Link>
+                                    <Link href="/board/board_faq_list" className="nav_link">1:1문의</Link>
                                 </li>
                                 
                                 <li className="top_link_r">
-                                    <Link href="/myinfo" className="nav_link">정보수정</Link>
+                                    <Link href="/myinfo/myinfo" className="nav_link">정보수정</Link>
                                 </li>
                                 
                                 <li className="top_link_r">
-                                    <Link href="/index" className="nav_link">로그아웃</Link>
+                                    <Link href="/" className="nav_link">로그아웃</Link>
                                 </li>
                             </ul>
                         </nav>

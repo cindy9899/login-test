@@ -1,8 +1,3 @@
-// <%
-// main_page = "board"
-// sub_page = "notice_list"
-// %>
-
 import Link from 'next/link';
 import Top from 'components/top';
 import Page_menu from 'components/page_menu';
@@ -28,15 +23,15 @@ export default function Main(){
                         <h2 className="page_title">공지사항</h2>
                     </div>
 
-                    <form onSubmit={(e)=>{e.preventDefault}}>
+                    <form onSubmit={(e) => e.preventDefault()}>
                         <div className="row form_search">
                             <div className="col-12 mt-3">
                                 <div className="row-wrap">
                                     <div className="col-0 col-md-1">
                                         <label for="">검색조건</label>
                                         <select name="" className="select">
-                                            <option >제목</option>
-                                            <option >내용</option>
+                                            <option>제목</option>
+                                            <option>내용</option>
                                         </select>
                                     </div>
 
@@ -58,7 +53,7 @@ export default function Main(){
                                         type="submit"
                                         className="abt gray_sbt"
                                         onClick={()=>{}}>
-                                        목록
+                                         목록
                                     </button>
                                 </li>
                                 <li> 
@@ -73,12 +68,11 @@ export default function Main(){
                             </ul>
                         </div>
                     </form>
-                
                 </section>
 
                 <section className="borderbox_table">                
                     <div className="notice_wrap">	
-                        <Link href="board/notice_view.asp">
+                        <Link href="/board/notice_view">
                             <dl>
                                 <dt>
                                     <span className="notice_p">공지</span>시스템이전에따른안내
@@ -87,7 +81,7 @@ export default function Main(){
                             </dl>	
                         </Link>
 
-                        <Link href="board/notice_view.asp">
+                        <Link href="/board/notice_view">
                             <dl>
                                 <dt>
                                     <span className="notice_p">공지</span>2022년 종합소득세납부안내
@@ -96,7 +90,7 @@ export default function Main(){
                             </dl>	
                         </Link>
 
-                        <Link href="board/notice_view.asp">
+                        <Link href="/board/notice_view">
                             <dl>
                                 <dt>
                                     <span className="notice_p">공지</span>2022년 개인회원 소득세 납부 안내 공지 2021년 매출소득 종합소득신고
@@ -105,7 +99,7 @@ export default function Main(){
                             </dl>
                         </Link>
                     
-                        <Link href="board/notice_view.asp">
+                        <Link href="/board/notice_view">
                             <dl>
                                 <dt>
                                     <span>02</span>1회 카드결제 승인금액 조정건
@@ -114,7 +108,7 @@ export default function Main(){
                             </dl>	
                         </Link>
 
-                        <Link href="board/notice_view.asp">
+                        <Link href="/board/notice_view">
                             <dl>
                                 <dt>
                                     <span>01</span>개인회원 매출금액 관리 주의 안내

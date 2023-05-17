@@ -68,7 +68,6 @@ export default function App({ Component, pageProps }) {
             );
 
             /*모바일*/
-
             $('.page_navs .page_ssub').hover(
                 function () {
                     $(this)
@@ -85,7 +84,6 @@ export default function App({ Component, pageProps }) {
             );
 
             /*모바일*/
-
             $('.page_navs .page_bsub').on('click', function () {
                 $('.psub_menu').toggleClass('active_1');
             });

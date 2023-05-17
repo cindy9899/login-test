@@ -19,19 +19,19 @@ export default function Page_menu() {
                     <li className="page_bsub">
                         <span className="dlink bgray_t">
                             {[
-                                pathSplit[1] == 'board' && '공지사항',
+                                pathSplit[1] == 'main' && '공지사항',
                                 pathSplit[1] == 'member' && '회원보유금액',
                                 pathSplit[1] == 'account_pay' && '계좌발급',
                                 pathSplit[1] == 'account_list' && '계좌발급조회',
                                 pathSplit[1] == 'payment_list' && '계좌입금조회',
                                 pathSplit[1] == 'calculate_list' && '계좌정산출금',
                                 pathSplit[1] == 'compte_list' && '계좌출금내역',
-                                pathSplit[1] == 'board_faq' && '1:1문의',
+                                pathSplit[1] == 'board' && '1:1문의',
                                 pathSplit[1] == 'myinfo' && '정보수정',
                                 pathSplit[1] == 'index' && '로그아웃'  
-
                             ]}       
                         </span>
+                        
                         <div className="arrow"></div>
 
                             <div className="psub_menu">
@@ -43,9 +43,9 @@ export default function Page_menu() {
                                     <li><Link href="/payment_list">계좌입금조회</Link></li>
                                     <li><Link href="/calculate_list">계좌정산출금</Link></li>
                                     <li><Link href="/compte_list">계좌출금내역</Link></li>
-                                    <li><Link href="/board_faq_list">1:1문의</Link></li>
-                                    <li><Link href="/myinfo">정보수정</Link></li>
-                                    <li><Link href="/index">로그아웃</Link></li>
+                                    <li><Link href="/board/board_faq_list">1:1문의</Link></li>
+                                    <li><Link href="/myinfo/myinfo">정보수정</Link></li>
+                                    <li><Link href="/">로그아웃</Link></li>
                                 </ul>
                             </div>
                     </li>

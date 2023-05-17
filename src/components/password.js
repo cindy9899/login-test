@@ -10,7 +10,10 @@ export default function Password() {
                     </Link>
                     
                     <form onSubmit={(e) => e.preventDefault()}>
-                        <div className="popup_title"><h2>비밀번호변경</h2></div>
+                        <div className="popup_title">
+                            <h2>비밀번호변경</h2>
+                        </div>
+
                         <div className="popup_body" >
                             <h3 className="i_pt">
                                 <img src="/img/icon/icon_dte.svg" alt="" /> 
@@ -26,22 +29,30 @@ export default function Password() {
                             <div className="agency_form">
                                 <dl className="dl_wh">
                                     <dt>아이디</dt>
-                                    <dd><input type="text" className="input" placeholder="사용하시는 아이디를 입력해주세요." /></dd>
+                                    <dd>
+                                        <input type="text" className="input" placeholder="사용하시는 아이디를 입력해주세요." />
+                                    </dd>
                                 </dl>
                 
                                 <dl className="dl_wh">
                                     <dt>기존 비밀번호</dt>
-                                    <dd><input type="password" placeholder="2~12자 이내 영문과 숫자만 가능합니다." /></dd>
+                                    <dd>
+                                        <input type="password" placeholder="2~12자 이내 영문과 숫자만 가능합니다." />
+                                    </dd>
                                 </dl>
 
                                 <dl className="dl_wh">
                                     <dt>변경 비밀번호</dt>
-                                    <dd><input type="password" placeholder="2~12자 이내 영문과 숫자만 가능합니다." /></dd>
+                                    <dd>
+                                        <input type="password" placeholder="2~12자 이내 영문과 숫자만 가능합니다." />
+                                    </dd>
                                 </dl>
 
                                 <dl className="dl_wh">
                                     <dt>변경 비밀번호 재입력</dt>
-                                    <dd><input type="password" placeholder="2~12자 이내 영문과 숫자만 가능합니다." /></dd>
+                                    <dd>
+                                        <input type="password" placeholder="2~12자 이내 영문과 숫자만 가능합니다." />
+                                    </dd>
                                 </dl>
                             </div>
                         </div>

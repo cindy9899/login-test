@@ -30,7 +30,8 @@ export default function Index({ alert_show }) {
             <div className="login_box">
                 <h1>
                     <span>
-                      <img src="img/logo.svg" alt="" className="logo_img" /></span>
+                      <img src="img/logo.svg" alt="" className="logo_img" />
+                    </span>
                     <span>Red Account</span>
                 </h1>
                 <form action='/main' method='get'  >
@@ -39,7 +40,7 @@ export default function Index({ alert_show }) {
                           <input type="text" placeholder="아이디를 입력해주세요." required />
                         </li>
                         <li>
-                          <input type="password"   placeholder="비밀번호를 입력해주세요." required/>
+                          <input type="password" placeholder="비밀번호를 입력해주세요." required />
                         </li>
                     </ul>
                     <div className="login_info">

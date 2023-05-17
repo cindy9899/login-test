@@ -18,20 +18,28 @@ export default function Calculate_list(){
             <Page_menu />
 
                 <section className="simplepay_box">
-                    <form onSubmit={(e)=>{e.preventDefault}} className="simplepay">
+                    <form onSubmit={(e) => e.preventDefault()} className="simplepay">
                         <div className="simplepay_bgwrap">
                             <div className="title_wrap">
                                 <h2 className="page_title">계좌정산출금</h2>
                                 <div className="info_box">
-                                    <p className="i_dte red_t"><img src="/img/icon/icon_dte.svg" alt="" /> 회원정보수정에서 설정가능합니다.</p>
-                                    <p className="i_dte red_t"><img src="/img/icon/icon_dte.svg" alt="" /> 예금주명과 일치하지 않을 경우 출금이 제한 됩니다.</p>
-                                    <p className="i_dte red_t"><img src="/img/icon/icon_dte.svg" alt="" /> 출금신청금액은 수수료를 포함하여 입력해주세요.</p>
+                                    <p className="i_dte red_t">
+                                        <img src="/img/icon/icon_dte.svg" alt="" /> 회원정보수정에서 설정가능합니다.
+                                    </p>
+                                    <p className="i_dte red_t">
+                                        <img src="/img/icon/icon_dte.svg" alt="" /> 예금주명과 일치하지 않을 경우 출금이 제한 됩니다.
+                                    </p>
+                                    <p className="i_dte red_t">
+                                        <img src="/img/icon/icon_dte.svg" alt="" /> 출금신청금액은 수수료를 포함하여 입력해주세요.
+                                    </p>
                                 </div>
                             </div>
                             <div className="simplepay_form calculate_form">
                                 <dl>
                                     <dt>보유금액</dt>
-                                    <dd><span className="red_t">777777</span>원</dd>
+                                    <dd>
+                                        <span className="red_t">777777</span>원
+                                    </dd>
                                     <dt>은행선택</dt>
                                     <dd>우리은행</dd>
                                     <dt>계좌번호</dt>
@@ -44,17 +52,27 @@ export default function Calculate_list(){
                             <div className="simplepay_form calculate_form">
                                 <dl>
                                     <dt>1회 출금한도</dt>
-                                    <dd><span className="black_t">30,000,000</span>원</dd>
+                                    <dd>
+                                        <span className="black_t">30,000,000</span>원
+                                    </dd>
                                     <dt>1일 출금가능 횟수</dt>
-                                    <dd><span>1건</span>&nbsp;&nbsp;/&nbsp;&nbsp;<span className="black_t">12건</span></dd>
+                                    <dd>
+                                        <span>1건</span>&nbsp;&nbsp;/&nbsp;&nbsp;<span className="black_t">12건</span>
+                                    </dd>
                                     <dt>출금신청금액</dt>
                                     <dd><input type="number" value="555"/></dd>
                                     <dt>계좌이체수수료</dt>
-                                    <dd><span>0</span><span>원</span></dd>
+                                    <dd>
+                                        <span>0</span><span>원</span>
+                                    </dd>
                                     <dt>입금 예정 금액</dt>
-                                    <dd><span>0</span><span>원</span></dd>
+                                    <dd>
+                                        <span>0</span><span>원</span>
+                                    </dd>
                                     <dt>출금비밀번호</dt>
-                                    <dd><input type="password" defaultValue="555"/></dd>
+                                    <dd>
+                                        <input type="password" defaultValue="555" />
+                                    </dd>
                                 </dl>
                             </div>
 
@@ -68,12 +86,13 @@ export default function Calculate_list(){
                     </form>
                 </section>
             </div>
+
             <Bottom_footer />
             <Footer />
+           
+            {/* <!--#include virtual="/inc/bottom_footer.asp"-->
+            <!--#include virtual="/inc/footer.asp"--> */}
         </>       
     )
 }
-
-{/* <!--#include virtual="/inc/bottom_footer.asp"-->
-<!--#include virtual="/inc/footer.asp"--> */}
 
