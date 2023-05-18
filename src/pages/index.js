@@ -12,9 +12,11 @@ export default function Index({ alert_show }) {
      <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Red Account" />
+        <meta name="description" content="Red Account" />        
         <meta name="author" content="" />
         <meta name="generator" content="" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />                
         <title>Red Account</title>
         
         {/* <!-- CSS --> */}
@@ -31,7 +33,7 @@ export default function Index({ alert_show }) {
             <div className="login_box">
                 <h1>
                     <span>
-                      <img src="img/logo.svg" alt="" className="logo_img" />
+                      <img src="/img/logo.svg" alt="" className="logo_img" />
                     </span>
                     <span>Red Account</span>
                 </h1>

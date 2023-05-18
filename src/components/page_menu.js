@@ -40,8 +40,8 @@ export default function Page_menu() {
                                 <ul className="menuc">
                                     <li><Link href="/main">공지사항</Link></li>
                                     <li><Link href="/member_pay">회원보유금액</Link></li>
-                                    <li><Link href="/account/account_pay">계좌발급</Link></li>
-                                    <li><Link href="/account/account_list">계좌발급조회</Link></li>
+                                    <li><Link href="/account_pay">계좌발급</Link></li>
+                                    <li><Link href="/account_list">계좌발급조회</Link></li>
                                     <li><Link href="/payment_list">계좌입금조회</Link></li>
                                     <li><Link href="/calculate_list">계좌정산출금</Link></li>
                                     <li><Link href="/compte_list">계좌출금내역</Link></li>
