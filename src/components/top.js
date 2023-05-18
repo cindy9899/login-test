@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
-import Calculate_list from 'pages/calculate_list';
 
 export default function Top(){
     return (
