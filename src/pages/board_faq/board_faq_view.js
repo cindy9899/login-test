@@ -71,7 +71,7 @@ export default function Board_faq_view(){
 							<dl>
 								<dt>답변</dt>
 								<dd>
-									<textarea>관리자가 답변쓴거에요~~ 봐주세요.</textarea>
+									<textarea defaultValue={'관리자가 답변쓴거에요~~ 봐주세요.'}></textarea>
 								</dd>
 							</dl>
 						</div>

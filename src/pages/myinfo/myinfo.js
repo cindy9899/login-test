@@ -31,20 +31,20 @@ export default function Myinfo(){
                             <dl className="dl_wh">
                                 <dt>아이디</dt>
                                 <dd>
-                                    <input type="text" className="input" value="test3333" />
+                                    <input type="text" className="input"  />
                                 </dd>
                             </dl>
 
                             <dl>
                                 <dt>비밀번호</dt>
                                 <dd>
-                                    <input type="password" value="555" />
+                                    <input type="password"  />
                                 </dd>
                             </dl>
                             <dl>
                                 <dt>비밀번호 확인</dt>
                                 <dd>
-                                    <input type="password" value="555" />
+                                    <input type="password"  />
                                 </dd>
                             </dl>
                         </div>
@@ -56,7 +56,7 @@ export default function Myinfo(){
                                 <dt>은행선택</dt>
                                 <dd>
                                     <select className="bank_select">
-                                        <option value="" defaultValue="">은행명선택</option>
+                                        <option defaultValue="">은행명선택</option>
                                         <option defaultValue="1">국민은행</option>
                                         <option defaultValue="우리은행">우리은행</option>
                                         <option defaultValue="신한은행">신한은행</option>

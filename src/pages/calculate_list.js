@@ -61,7 +61,7 @@ export default function Calculate_list(){
                                         <span>1건</span>&nbsp;&nbsp;/&nbsp;&nbsp;<span className="black_t">12건</span>
                                     </dd>
                                     <dt>출금신청금액</dt>
-                                    <dd><input type="number" value="555"/></dd>
+                                    <dd><input type="number" /></dd>
                                     <dt>계좌이체수수료</dt>
                                     <dd>
                                         <span>0</span><span>원</span>

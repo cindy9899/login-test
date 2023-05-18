@@ -28,7 +28,7 @@ export default function Main(){
                             <div className="col-12 mt-3">
                                 <div className="row-wrap">
                                     <div className="col-0 col-md-1">
-                                        <label for="">검색조건</label>
+                                        <label htmlFor="">검색조건</label>
                                         <select name="" className="select">
                                             <option>제목</option>
                                             <option>내용</option>
@@ -36,7 +36,7 @@ export default function Main(){
                                     </div>
 
                                     <div className="col-md-11">
-                                        <label for="" className="m_t2">검색입력</label>
+                                        <label htmlFor="" className="m_t2">검색입력</label>
                                         <div className="search_ba wh70">
                                             <input type="text"  className="input" placeholder="검색어를 직접 입력해주세요." />
                                             <button type="submit" className="bt blue_bgbor">검색</button>
