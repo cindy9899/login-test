@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Password from 'components/password';
 import Agreement from 'components/agreement';
 import Privacy from 'components/privacy';
+import Footer from 'components/footer';
 
 export default function Index({ alert_show }) {
   return (
@@ -16,7 +17,7 @@ export default function Index({ alert_show }) {
         <meta name="author" content="" />
         <meta name="generator" content="" />
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />                
+        <link rel="icon" href="/favicon.ico" sizes="any" />         
         <title>Red Account</title>
         
         {/* <!-- CSS --> */}
@@ -103,6 +104,10 @@ export default function Index({ alert_show }) {
             </div>
         </div>        
       </div>
+      <Privacy/>
+      <Password/>
+      <Agreement/>
+      <Footer/>
     </>
   );    
 }
