@@ -241,7 +241,7 @@ label.f_20{font-size:1.0rem;}
 .bg_green .btn_close{background:#30830c;}
 /*버튼*/
 .popup_footer{padding:0px 15px 0px 15px;padding-bottom:35px;text-align:Center;}
-.popup_footer .bt{width:150px;margin:0 auto;font-size:0.80rem;display:inline-block;}
+.popup_footer .bt{width:150px;margin:0 auto;font-size:0.80rem;display:inline-block; margin-right: 5px;}
 .alert_popup .blue_bgbor{background:#777;border:1px solid #777;color:#fff;}
 .alert_popup .blue_bgbor:hover{background:#c61e2e;border:1px solid #c61e2e;}
 
