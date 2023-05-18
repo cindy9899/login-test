@@ -122,7 +122,7 @@ textarea::placeholder {color:#999;}
 input{background: #fff;border:1px solid #ccc;border-radius:8px; padding: .7em .7em;width:100%;font-size:0.75rem;}
 .gray_ibg{background: rgba(0,0,0,0.05);}
 td > input{padding: .45em .5em;border-radius:5px;}
-input[type="checkbox"]{width:16px;height:16px;margin:0px;}
+input[type="checkbox"]{width:16px;height:16px;margin:0px; margin-right: 5px;}
 input[type="radio"]{width:13px;height:13px;margin:0px;vertical-align: -2px;}
 input[type=password]{font-family:"Noto Sans KR", sans-serif !important;}
 input[type=password]::placeholder {font-family: 'NanumSquare', sans-serif;}
@@ -386,3 +386,7 @@ label.checkbox{display:flex;align-items: center;line-height: 17px;}
   transition: all 0.15s ease 0.15s; /*0.15초 변화시간 + 딜레이 시간 줌*/
 }
 
+
+
+/* ---------버튼 여백---------*/
+.la_btn{margin-right: 3px;}

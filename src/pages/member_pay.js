@@ -15,8 +15,7 @@ export default function Member_pay(){
             <div id="content" className="container">
             {/* <!-- 페이지메뉴 -->
             <!--#include virtual="/inc/page_menu.asp"--> */}
-
-            <Page_menu />
+                <Page_menu />
 
             <section className="borderbox">
                 <div className="title_wrap">
@@ -167,7 +166,7 @@ export default function Member_pay(){
 
                         <tfoot>
                             <tr>
-                                <th scope="col" colspan="7">합계</th>
+                                <th scope="col" colSpan="7">합계</th>
                                 <td className="tr_l pay_t">100,000,000 원</td>
                                 <td className="tr_l pay_t red_t">1,000원</td>
                                 <td className="tr_l pay_t">99,999,000원</td>                            

@@ -285,7 +285,7 @@ input[type=file] {display: none;}
 .list_btnw{text-align:right;}
 .list_btnw .list_btn{text-align:center;}
 .checkbox_list{margin-right:15px;}
-.notice_wrap .faq_listwrap dt span{padding-left:28px;}
+.notice_wrap .faq_listwrap dt span{padding-left:0px;}
 /*이체신청*/
 .transfer_box{padding:0px;}
 .transfer_bgwrap h3{color:#333;border-bottom:1px solid #ddd;padding-bottom:8px;}

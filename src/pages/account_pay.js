@@ -32,7 +32,7 @@ export default function Account_pay(){
                             <input type="text" className="input"  placeholder="휴대폰번호 인증"/>
                         </li>
 						<li className="confirm_bt">
-                            <button className="bt"  onClick="">인증요청</button>
+                            <button className="bt"  onClick={() => {}} >인증요청</button>
                         </li>
 					</ul>
 
@@ -41,7 +41,7 @@ export default function Account_pay(){
                             <input type="text" className="input"  placeholder="인증번호 입력"/>
                         </li>
 						<li className="confirm_bt">
-                            <button className="bt"  onClick="">확인</button>
+                            <button className="bt"  onClick={() => {}}>확인</button>
                         </li>
 					</ul>
 
@@ -91,7 +91,7 @@ export default function Account_pay(){
                             <input type="text" className="input"  placeholder="예금주입력"/>
                         </li>
 						<li className="confirm_bt">
-                            <button className="bt"  onClick="">인증요청</button>
+                            <button className="bt"  onClick={() => {}} >인증요청</button>
                         </li>
 					</ul>
                  </div>
@@ -105,7 +105,7 @@ export default function Account_pay(){
                             <input type="text" className="input"  placeholder="인증번호입력"/>
                         </li>
 						<li className="confirm_bt">
-                            <button className="bt"  onClick="">확인</button>
+                            <button className="bt"  onClick={() => {}}>확인</button>
                         </li>
 					</ul>
                  </div>
