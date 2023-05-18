@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -12,7 +13,7 @@ export default function Page_menu() {
                 <ul className="page_navs">
                     <li className="home_ipage">
                         <Link href="/main" className="dlink">
-                            <img src="/img/icon/home-page.svg" />
+                            <img src="/img/icon/home-page.svg" alt='' />
                         </Link>
                     </li>
 
@@ -20,7 +21,7 @@ export default function Page_menu() {
                         <span className="dlink bgray_t">
                             {[
                                 pathSplit[1] == 'main' && '공지사항',
-                                pathSplit[1] == 'member' && '회원보유금액',
+                                pathSplit[1] == 'member_pay' && '회원보유금액',
                                 pathSplit[1] == 'account_pay' && '계좌발급',
                                 pathSplit[1] == 'account_list' && '계좌발급조회',
                                 pathSplit[1] == 'payment_list' && '계좌입금조회',

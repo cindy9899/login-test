@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Bottom_footer from "components/bottom_footer";
 import Footer from "components/footer";
 import Page_menu from "components/page_menu";
