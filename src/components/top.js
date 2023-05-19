@@ -1,5 +1,5 @@
-import Top_mobile from "./top_mobile";
-import Top_pc from "./top_pc";
+import Top_mobile from './top_mobile';
+import Top_pc from './top_pc';
 import { useEffect, useState } from 'react';
 
 /* eslint-disable @next/next/no-img-element */

@@ -13,6 +13,7 @@ import 'styles/common.css';
 import 'styles/content.css';
 import 'styles/layout.css';
 import $ from 'jquery';
+import Head from 'next/head';
 // import jQuery from "jquery";
 // window.$ = window.jQuery = jQuery;
 
@@ -184,6 +185,21 @@ export default function App({ Component, pageProps }) {
 
     return (
         <>
+            <Head>
+                <meta charSet="utf-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+                />
+                <meta name="description" content="Red Account" />
+                <meta name="author" content="" />
+                <meta name="generator" content="" />
+                <meta
+                    httpEquiv="Content-Security-Policy"
+                    content="upgrade-insecure-requests"
+                />
+                <link rel="icon" href="/favicon.ico" sizes="any" />
+            </Head>
             <Component {...pageProps} alert_show={alert_show} />
         </>
     );
