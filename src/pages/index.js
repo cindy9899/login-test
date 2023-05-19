@@ -9,15 +9,8 @@ import { useEffect } from 'react';
 
 export default function Index({ alert_show }) {
     useEffect(() => {
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    const handleResize = () => {
         localStorage.setItem('top_resize', JSON.stringify(window.innerWidth));
-    };
+    }, []);
     return (
         <>
             <Head>
