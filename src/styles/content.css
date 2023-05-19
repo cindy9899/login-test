@@ -338,3 +338,74 @@ p.i_dte{ display: flex; align-items: center;font-size:0.75rem;margin-top:1rem;co
 .banknumber_info{width:calc(68% - 5px);}
 .confirm_number{ display: flex; justify-content: space-between;margin-top:10px;}
 
+
+/* 모바일 상단바 */
+@media (max-width: 992px) {
+    .top_wrap .top-logo span {
+        margin-left: 0px;
+    }
+    #content {
+        margin-top: 100px;
+    }
+
+    #header {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 999;
+    }
+    .nav-menu.gnbn {
+        position: fixed;
+        left: 0px;
+        top: 80px;
+        width: 100%;
+        background: #fff;
+        box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .act.gnb_memu {
+        border-bottom: 1px solid #ededed;
+    }
+    /*.act.gnb_memu.active{background:#0060ff;}
+    .act.gnb_memu.active a{color:#fff;}*/
+    .act.gnb_memu a {
+        color: #666;
+    }
+    .act.gnb_memu > a {
+        padding: 0.5rem 0.25rem;
+        width: 100%;
+    }
+    .gnb a {
+        display: inline-block;
+    }
+    .act.gnb_memu:hover {
+        transition-duration: 0.5s;
+    }
+    .act.gnb_memu  {
+        overflow: hidden;
+        height: 0px;
+        transition-duration: 1s;
+        font-size: 0.85rem;
+    }
+    .act.gnb_memu  {
+        padding: 0.4rem;
+        width: 100%;
+        font-size: 0.85rem;
+    }
+    .act.gnb_memu > a {
+        font-size: 1rem;
+    }
+    .act.gnb_memu:hover > a {
+        background: rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+    .act.gnb_memu:hover > .sub_menu {
+        display: block;
+        opacity: 1;
+        width: 100%;
+        transition-duration: 1s;
+    }
+    .act.gnb_memu:hover  {
+        background: rgba(0, 0, 0, 0.05);
+    }
+}
