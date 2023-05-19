@@ -1,75 +1,34 @@
+import Top_mobile from "./top_mobile";
+import Top_pc from "./top_pc";
+import { useEffect, useState } from 'react';
+
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link'
+export default function Top() {
+    // 현재 화면 너비값
+    const get_resize =
+        (typeof window !== 'undefined' && localStorage.getItem('top_resize')) ||
+        1920;
 
-export default function Top(){
-    return (
-        <>    
-            <div id="header">
-                <div className="container">
-                    <div className="top_wrap">
-                        {/* <!-- 로고 --> */}
-                        <h1 className="top-logo">
-                            <Link href="/main">
-                                <span>
-                                    <img src="/img/logo.svg" alt="" className="logo_img" />
-                                </span>
-                                <span>Red Account</span>
-                            </Link>
-                        </h1>
-                        
-                        <nav className="nav-menu">
-                            {/* <!-- 메뉴 --> */}
-                            <ul className="gnb">
-                                <li className="act">
-                                    <Link href="/main" className="nav_link">공지사항</Link>
-                                </li>
-                                
-                                <li className="">
-                                    <Link href="/member_pay" className="nav_link">회원보유금액</Link>
-                                </li>
-                                
-                                <li className="">
-                                    <Link href="/account_pay" className="nav_link">계좌발급</Link>                                        
-                                </li>
-                                
-                                <li className="">
-                                    <Link href="/account_list" className="nav_link">계좌발급조회</Link>
-                                </li>
-                                
-                                <li className="">
-                                    <Link href="/payment_list" className="nav_link">계좌입금조회</Link>                
-                                </li>
-                                
-                                <li className="">
-                                    <Link href="/calculate_list" className="nav_link">계좌정산출금</Link>
-                                </li>
+    // 화면 너비값 상태값
+    const [resize, setResize] = useState(get_resize);
 
-                                <li className="">
-                                    <Link href="/compte_list" className="nav_link">계좌출금내역</Link>
-                                </li>
-                                
-                                <li className="">
-                                    <Link href="/board_faq/board_faq_list" className="nav_link">1:1문의</Link>
-                                </li>
-                                
-                                <li className="top_link_r">
-                                    <Link href="/myinfo/myinfo" className="nav_link">정보수정</Link>
-                                </li>
-                                
-                                <li className="top_link_r">
-                                    <Link href="/" className="nav_link">로그아웃</Link>
-                                </li>
-                            </ul>
-                        </nav>
+    // 서버사이드렌더링 에러 방지 상태값
+    const [mounted, setMounted] = useState(false);
 
-                        <Link className="menu-trigger" href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+    // 화면 너비값 추출
+    useEffect(() => {
+        setMounted(true);
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    // resize 이벤트 발생시 함수호출
+    const handleResize = () => {
+        localStorage.setItem('top_resize', JSON.stringify(window.innerWidth));
+        setResize(window.innerWidth);
+    };
+
+    return <>{mounted && resize > 993 ? <Top_pc /> : <Top_mobile />}</>;
 }

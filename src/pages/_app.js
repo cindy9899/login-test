@@ -89,82 +89,82 @@ export default function App({ Component, pageProps }) {
             });
         }
 
-        var resizeTimeout;
+        // var resizeTimeout;
 
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function () {
-            $(window)
-                .resize(function () {
-                    if ($(window).width() > 993) {
-                        $('.nav-menu').addClass('gnbn');
-                        $('.nav-menu .gnb > li').addClass('gnb_memu');
-                        $('.nav-menu').removeClass('mobile_gnb');
-                        $('.nav-menu .gnb > li').removeClass('moblie_nav');
-                    } else {
-                        $('.nav-menu').removeClass('gnbn');
-                        $('.nav-menu .gnb > li').removeClass('gnb_memu');
-                        $('.nav-menu').addClass('mobile_gnb');
-                        $('.nav-menu .gnb > li').addClass('moblie_nav');
-                    }
-                    if ($(window).width() > 993) {
-                        $('.gnbn > ul> li > a').on(
-                            'mouseover focus',
-                            function () {
-                                $(this)
-                                    .parent()
-                                    .addClass('active')
-                                    .siblings()
-                                    .removeClass('active');
-                                return false;
-                            },
-                        );
+        // clearTimeout(resizeTimeout);
+        // resizeTimeout = setTimeout(function () {
+        //     $(window)
+        //         .resize(function () {
+        //             if ($(window).width() > 993) {
+        //                 $('.nav-menu').addClass('gnbn');
+        //                 $('.nav-menu .gnb > li').addClass('gnb_memu');
+        //                 $('.nav-menu').removeClass('mobile_gnb');
+        //                 $('.nav-menu .gnb > li').removeClass('moblie_nav');
+        //             } else {
+        //                 $('.nav-menu').removeClass('gnbn');
+        //                 $('.nav-menu .gnb > li').removeClass('gnb_memu');
+        //                 $('.nav-menu').addClass('mobile_gnb');
+        //                 $('.nav-menu .gnb > li').addClass('moblie_nav');
+        //             }
+        //             if ($(window).width() > 993) {
+        //                 $('.gnbn > ul> li > a').on(
+        //                     'mouseover focus',
+        //                     function () {
+        //                         $(this)
+        //                             .parent()
+        //                             .addClass('active')
+        //                             .siblings()
+        //                             .removeClass('active');
+        //                         return false;
+        //                     },
+        //                 );
 
-                        $('.gnbn li li > a').on('mouseover focus', function () {
-                            $(this)
-                                .parent()
-                                .addClass('active_sub')
-                                .siblings()
-                                .removeClass('active_sub');
-                            return false;
-                        });
+        //                 $('.gnbn li li > a').on('mouseover focus', function () {
+        //                     $(this)
+        //                         .parent()
+        //                         .addClass('active_sub')
+        //                         .siblings()
+        //                         .removeClass('active_sub');
+        //                     return false;
+        //                 });
 
-                        if ($('.nav-menu.gnbn').is(':hidden')) {
-                            $(this).css('display', 'block');
-                        } else {
-                        }
-                    } else {
-                        if ($('.nav-menu.gnbn').is(':hidden')) {
-                            $(this).css('display', 'block');
-                        } else {
-                        }
-                        //햄버거메뉴
-                        $('.menu-trigger').on('click', function () {
-                            if ($('.mobile_gnb').is(':hidden')) {
-                                $('.mobile_gnb').stop(true, true).fadeIn(200);
-                                $('.menu-trigger').addClass('active-1');
+        //                 if ($('.nav-menu.gnbn').is(':hidden')) {
+        //                     $(this).css('display', 'block');
+        //                 } else {
+        //                 }
+        //             } else {
+        //                 if ($('.nav-menu.gnbn').is(':hidden')) {
+        //                     $(this).css('display', 'block');
+        //                 } else {
+        //                 }
+        //                 // 햄버거메뉴
+        //                 $('.menu-trigger').on('click', function () {
+        //                     if ($('.mobile_gnb').is(':hidden')) {
+        //                         $('.mobile_gnb').stop(true, true).fadeIn(200);
+        //                         $('.menu-trigger').addClass('active-1');
 
-                                $('.moblie_nav').click(function () {
-                                    $(this).children('.inner').slideUp();
-                                    if (
-                                        $(this).children('.inner').is(':hidden')
-                                    ) {
-                                        $(this).children('.inner').slideDown();
-                                    } else {
-                                        $(this).children('.inner').slideUp();
-                                    }
-                                });
-                            } else {
-                                $('.mobile_gnb').stop(true, true).fadeOut(200);
-                                $('.menu-trigger').removeClass('active-1');
-                            }
-                            return false;
-                        });
+        //                         $('.moblie_nav').click(function () {
+        //                             $(this).children('.inner').slideUp();
+        //                             if (
+        //                                 $(this).children('.inner').is(':hidden')
+        //                             ) {
+        //                                 $(this).children('.inner').slideDown();
+        //                             } else {
+        //                                 $(this).children('.inner').slideUp();
+        //                             }
+        //                         });
+        //                     } else {
+        //                         $('.mobile_gnb').stop(true, true).fadeOut(200);
+        //                         $('.menu-trigger').removeClass('active-1');
+        //                     }
+        //                     return false;
+        //                 });
 
-                        return false;
-                    }
-                })
-                .resize();
-        }, 10);
+        //                 // return false;
+        //             }
+        //         })
+        //         .resize();
+        // }, 10);
     }, [pageProps]);
 
     // 팝업창
