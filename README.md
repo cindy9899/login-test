@@ -24,7 +24,9 @@
     </li>
 </ul>
 <h3>파일 git 저장소에 올리는 방법</h3>
-<h5>git pull origin development 저장소 파일과 병합> git add . 명령어로 파일추가 > git status로 상태 확인 > git commit -m "init" 내용 저장 > git
+<h5>
+    git push 하기전에는 항상 git 주소 들어가서 pull request로 현재 변경상태를 먼저 확인하도록 합니다. <br />
+    git pull origin development 저장소 파일과 병합> git add . 명령어로 파일추가 > git status로 상태 확인 > git commit -m "init" 내용 저장 > git
     push
     origin development > 내용 업로드<br />
 </h5>
@@ -34,8 +36,9 @@
 </h5>
 
 <h3>주의 사항</h3>
-<h5>파일 수정하실때 서로 합의하신다음에 그 파일만 작업하시고 다른거는 수정하면 안됩니다. git push 할때 꼬입니다. 즉 다른 사람이 작업하고 있는 파일은 건들면 안돼요.<br />
-    git push 하기전에는 항상 git 주소 들어가서 pull request로 현재 변경상태를 먼저 확인하도록 합니다. 한쪽이 push 했다면 다른 한쪽은 git pull 명령어로 파일 다운받고 작업진행하시면
-    됩니다. 혹시모르는 일이니 폴더 만들어서 날짜별로 백업 하시면 좋습니다.<br /> production branch 에서는 development merge 한거 제가 올릴거니깐 여기서 작업하시면 안돼요!
+<h5>파일 수정하실때 서로 합의하신다음에 그 파일만 작업하시고 다른거는 수정하면 안됩니다. git push 할때 꼬입니다. 즉 다른 사람이 작업하고 있는 파일은 건들면 안돼요.<br /> 한쪽이 push 했다면
+    다른 한쪽은 git pull 명령어로 파일 다운받고 작업진행하시면
+    됩니다. 혹시모르는 일이니 폴더 만들어서 날짜별로 백업 하시면 좋습니다.<br />
+    production branch 에서는 development merge 한거 제가 올릴거니깐 여기서 작업하시면 안돼요!
 </h5>
 <h5></h5>
