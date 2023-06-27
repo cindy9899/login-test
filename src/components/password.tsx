@@ -2,7 +2,7 @@
 import { User } from "@prisma/client"
 import Link from "next/link"
 import { SubmitHandler, useForm } from "react-hook-form"
-import { axiosInstance } from "../pages/api"
+import { axiosInstance } from "../pages/apis"
 import { Password } from "next-auth";
 import { useRouter } from "next/router";
 
