@@ -77,11 +77,7 @@ export default function Index({ alert_show }: any) {
                             </span>
                             <span>Red Account</span>
                         </h1>
-                        <form onSubmit={(e)=>{
-                            e.preventDefault();
-                            handleSubmit(onValid);
-                        }
-                           }>
+                        <form onSubmit={handleSubmit(onValid)}>
                             <ul className="login_input">
                                 <li>
                                     <input
