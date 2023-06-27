@@ -16,7 +16,7 @@ export default async function handler(
                     id: req.body.id
                 }
             })
-            if(userData.password === req.body.password){
+            if(userData?.password === req.body.password){
                 const resyl = await db.user.update({
                     where: {
                         id: req.body.id,
