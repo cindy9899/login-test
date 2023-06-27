@@ -16,7 +16,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": "./src"
   },
   "include": [
     "next-env.d.ts",
@@ -25,5 +26,5 @@
 , "src/components/password.tsx"  ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }
