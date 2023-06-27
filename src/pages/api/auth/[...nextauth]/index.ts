@@ -70,7 +70,7 @@ export const authOptions = {
         },
         async session({session, token}: {session: Session; token: JWT}) {
             const userData = await db.user.findFirst({
-                where: {id: token?.id},
+                where: {id: token?.id!},
                 select: {
                     user_code: true,
                     id: true,
@@ -82,10 +82,10 @@ export const authOptions = {
             // 불변객체 관리
             return produce(session, (draft) => {
                 draft.user = {
-                    user_code: userData?.user_code,
-                    id: userData?.id,
-                    name: userData?.name,
-                    nickname: userData?.user_code
+                    user_code: userData?.user_code!,
+                    id: userData?.id!,
+                    name: userData?.name!,
+                    nickname: userData?.user_code!
                 };
             });
         },

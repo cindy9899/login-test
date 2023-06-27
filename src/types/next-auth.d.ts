@@ -6,7 +6,7 @@ declare module 'next-auth' {
             user_code: string;
             id: string;
             name: string;
-            nickname: string;
+            nickname: string?;
         }
     }
 
