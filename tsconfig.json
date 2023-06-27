@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/password.tsx"  ],
+, "src/components/password.tsx", "src/pages/main.js"  ],
   "exclude": [
     "node_modules"
   ],
