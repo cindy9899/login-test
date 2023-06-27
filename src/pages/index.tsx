@@ -1,13 +1,39 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import Head from 'next/head';
-import Password from 'components/password';
-import Agreement from 'components/agreement';
-import Privacy from 'components/privacy';
-import Footer from 'components/footer';
+import Password from '../components/password';
+import Agreement from '../components/agreement';
+import Privacy from '../components/privacy';
+import Footer from '../components/footer';
 import { useEffect } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { User } from '@prisma/client'
+import { signIn } from 'next-auth/react'
+import { useRouter } from 'next/router';
 
-export default function Index({ alert_show }) {
+export default function Index({ alert_show }: any) {
+    const router = useRouter()
+    const {
+        register,
+        reset,
+        formState: { errors },
+        handleSubmit,
+    } = useForm<User>({mode: 'onSubmit'})
+    
+    const onValid: SubmitHandler<User> = async (formData) => {
+        const { id, password } = formData;
+        const res = await signIn('id-pw-credential', {
+            id,
+            password,
+            redirect: false
+        });
+
+        res?.status === 401 /* null */ && alert('로그인 정보가 일치하지 않습니다.');
+        if(res?.status === 200) {
+            await Promise.all([router.replace('/main'), reset()])
+        }
+    }
+
     useEffect(() => {
         window.addEventListener('resize', handleResize);
         localStorage.setItem('top_resize', JSON.stringify(window.innerWidth));
@@ -19,6 +45,7 @@ export default function Index({ alert_show }) {
     const handleResize = () => {
         localStorage.setItem('top_resize', JSON.stringify(window.innerWidth));
     };
+
     return (
         <>
             <Head>
@@ -50,10 +77,18 @@ export default function Index({ alert_show }) {
                             </span>
                             <span>Red Account</span>
                         </h1>
-                        <form action="/main" method="get">
+                        <form onSubmit={handleSubmit(onValid)}>
                             <ul className="login_input">
                                 <li>
                                     <input
+                                        {...register('id', {
+                                            required: {
+                                                value: true,
+                                                message:
+                                                    '아이디는 필수 입력 사항입니다.',
+                                            },
+                                        })}
+                                        name={'id'}
                                         type="text"
                                         placeholder="아이디를 입력해주세요."
                                         required
@@ -61,6 +96,14 @@ export default function Index({ alert_show }) {
                                 </li>
                                 <li>
                                     <input
+                                        {...register('password', {
+                                            required: {
+                                                value: true,
+                                                message:
+                                                    '패스워드는 필수 입력 사항입니다.',
+                                            },
+                                        })}
+                                        name={'password'}
                                         type="password"
                                         placeholder="비밀번호를 입력해주세요."
                                         required
@@ -92,7 +135,7 @@ export default function Index({ alert_show }) {
                                 </div>
                             </div>
                             <div className="btn_wrap">
-                                <button className="point_bg btn_login">
+                                <button type='submit' className="point_bg btn_login">
                                     로그인
                                 </button>
                                 <ul className="info_list">

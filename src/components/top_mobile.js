@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+import { signOut } from 'next-auth/react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 export default function Top_mobile() {
     const [drop, setDrop] = useState(false);
- 
+    const router = useRouter();
 
     return (
         <div id="header">
@@ -115,7 +117,14 @@ export default function Top_mobile() {
                                     </Link>
                                 </li>
 
-                                <li className="top_link_r moblie_nav">
+                                <li 
+                                    className="top_link_r moblie_nav"
+                                    onClick={async () => {
+                                        alert('로그아웃');
+                                        await signOut({ redirect: false })
+                                        await router.replace('/')
+                                    }}
+                                >
                                     <Link href="/" className="nav_link">
                                         로그아웃
                                     </Link>

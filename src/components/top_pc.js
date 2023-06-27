@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+import { signOut } from 'next-auth/react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 export default function Top_pc() {
     const [active, setActive] = useState('gnb_memu');
-
+    const router = useRouter()
 
     return (
         <>
@@ -173,6 +175,11 @@ export default function Top_pc() {
                                     className={
                                         active === '/' ? 'active' : 'gnb_memu'
                                     }
+                                    onClick={async () => {
+                                        alert("로그아웃");
+                                        await signOut({ redirect: false })
+                                        await router.replace('/')
+                                    }}
                                     onMouseOver={() => setActive('/')}
                                 >
                                     <Link href="/" className="nav_link">

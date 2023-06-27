@@ -1,7 +1,7 @@
-import Bottom_footer from "components/bottom_footer";
-import Footer from "components/footer";
-import Page_menu from "components/page_menu";
-import Top from "components/top";
+import Bottom_footer from "../components/bottom_footer";
+import Footer from "../components/footer";
+import Page_menu from "../components/page_menu";
+import Top from "../components/top";
 import Link from "next/link";
 
 export default function Member_pay(){

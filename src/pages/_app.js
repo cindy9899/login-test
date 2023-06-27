@@ -8,16 +8,17 @@
 // }
 
 import { useEffect } from 'react';
-import 'styles/calendar.css';
-import 'styles/common.css';
-import 'styles/content.css';
-import 'styles/layout.css';
+import '../styles/calendar.css';
+import '../styles/common.css';
+import '../styles/content.css';
+import '../styles/layout.css';
 import $ from 'jquery';
 import Head from 'next/head';
 // import jQuery from "jquery";
 // window.$ = window.jQuery = jQuery;
+import { SessionProvider } from 'next-auth/react'
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps: {session, ...pageProps} }) {
     // jquery
     useEffect(() => {
         $(function () {
@@ -200,7 +201,9 @@ export default function App({ Component, pageProps }) {
                 />
                 <link rel="icon" href="/favicon.ico" sizes="any" />
             </Head>
+            <SessionProvider session={session}>
             <Component {...pageProps} alert_show={alert_show} />
+            </SessionProvider>
         </>
     );
 }
