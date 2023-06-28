@@ -28,7 +28,6 @@ export const authOptions = {
                 }
             },
             async authorize(credentials, _req) {
-                console.log("진입")
                 // 유저 정보 조회
                 const userData = await db.user.findFirst({
                     where: {id: credentials?.id}

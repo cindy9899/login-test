@@ -22,7 +22,6 @@ export default function Index({ alert_show }: any) {
     
     const onValid: SubmitHandler<User> = async (formData) => {
         const { id, password } = formData;
-        console.log("클릭")
         const res = await signIn('id-pw-credential', {
             id,
             password,
