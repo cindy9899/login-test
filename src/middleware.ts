@@ -10,15 +10,15 @@ export async function middleware(req: NextRequest, event: NextFetchEvent) {
     const session = await getToken({ req, secret, raw: true });
     const { pathname } = req.nextUrl;
     
-    if(pathname=='/'){
-        if(session) { // index 페이지 진입 시 세션이 존재하는 경우
-            return NextResponse.redirect(new URL('/main', req.url))
-        }
-    }else{
-        if (!session) { // 다른 페이지 진입 시 세션이 없는 경우
-            return NextResponse.redirect(new URL('/', req.url));
-        }
-    }
+    // if(pathname=='/'){
+    //     if(session) { // index 페이지 진입 시 세션이 존재하는 경우
+    //         return NextResponse.redirect(new URL('/main', req.url))
+    //     }
+    // }else{
+    //     if (!session) { // 다른 페이지 진입 시 세션이 없는 경우
+    //         return NextResponse.redirect(new URL('/', req.url));
+    //     }
+    // }
     console.log('미들웨어');
 }
 
