@@ -29,10 +29,10 @@ export default function Index({ alert_show }: any) {
             redirect: false
         });
 
-        // res?.status === 401 /* null */ && alert('로그인 정보가 일치하지 않습니다.');
-        // if(res?.status === 200) {
-        //     // await Promise.all([router.replace('/main'), reset()])
-        // }
+        res?.status === 401 /* null */ && alert('로그인 정보가 일치하지 않습니다.');
+        if(res?.status === 200) {
+            await Promise.all([router.replace('/main'), reset()])
+        }
     }
 
     useEffect(() => {
