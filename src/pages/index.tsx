@@ -20,8 +20,7 @@ export default function Index({ alert_show }: any) {
         handleSubmit,
     } = useForm<User>({mode: 'onSubmit'})
     
-    const onValid: SubmitHandler<User> = async (formData, e) => {
-        e?.preventDefault();
+    const onValid: SubmitHandler<User> = async (formData) => {
         const { id, password } = formData;
         console.log("클릭")
         const res = await signIn('id-pw-credential', {

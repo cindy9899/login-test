@@ -19,7 +19,7 @@ input:focus::-moz-placeholder{color:transparent!important;}
 input:focus:-moz-placeholder{color:transparent!important;}
 .clear:before,.clear:after{content:" ";display:table;}
 .clear:after{clear:both;}
-.clear{*zoom:1;}
+.clear{*zoom: 1;}
 .clear_line{clear:both;}
 .ellipsis{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
 .container{text-align:Center; padding-left:15px;padding-right:15px;max-width:1350px;margin:0px auto;}
