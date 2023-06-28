@@ -7,8 +7,8 @@ const secret = process.env.NEXTAUTH_SECRET;
 
 export async function middleware(req: NextRequest, event: NextFetchEvent) {
     // 토큰이 존재할때에만 토큰 추출
-    const session = await getToken({ req, secret, raw: true });
-    const { pathname } = req.nextUrl;
+    // const session = await getToken({ req, secret, raw: true });
+    // const { pathname } = req.nextUrl;
     
     // if(pathname=='/'){
     //     if(session) { // index 페이지 진입 시 세션이 존재하는 경우
