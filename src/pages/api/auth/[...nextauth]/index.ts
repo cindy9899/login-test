@@ -7,7 +7,6 @@ import { produce } from 'immer'
 const db = new PrismaClient()
 
 export const authOptions = {
-    secret: process.env.NEXTAUTH_SECRET,
     session: {
         maxAge: 60*30 // 30분 후 세션 만료
     },
