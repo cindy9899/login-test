@@ -11,15 +11,20 @@ datasource db {
 }
 
 model User {
-  idx         Int       @id @default(autoincrement())
-  user_code   String    @unique
-  id          String    @unique
-  password    String    // 암호화 필요
-  name        String    
-  nickname    String    @unique
-  phone       String?
-  email       String?   
-  created_at  DateTime  @default(dbgenerated("Now()")) @db.DateTime
-  updated_at  DateTime  @default(dbgenerated("Now() ON UPDATE NOW()")) @db.DateTime
-  
+  idx            Int       @id @default(autoincrement())
+  user_code      String    @unique
+  admin_state   Boolean  @default(false)
+  upper_company  String?
+  upper_code     String?
+  id             String    @unique
+  password       String    // 암호화 필요
+  name           String    
+  nickname       String?    @unique
+  phone          String?
+  email          String?
+  zip_code       String
+  address        String
+  detail_address String?
+  created_at     DateTime  @default(dbgenerated("Now()")) @db.DateTime
+  updated_at     DateTime  @default(dbgenerated("Now() ON UPDATE NOW()")) @db.DateTime
 }
