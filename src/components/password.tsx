@@ -10,21 +10,16 @@ export default function Password() {
     const router = useRouter()
     const { register, reset, clearErrors, handleSubmit } = useForm<Password>();
     const onValid: SubmitHandler<Password> = async (formData) => {
-        console.log('버튼 클릭')
-        if(formData.new_password == formData.check_password){ // 비밀번호 확인 일치
-            const res = await axiosInstance.post('/api/auth/change', formData)
+        const res = await axiosInstance.post('/api/auth/change', formData)
 
-            if(res?.data.status === 401){ // 기존 비밀번호 불일치
-                alert('기존 로그인 정보가 일치하지 않습니다.')
-            }
-            if(res?.data.status === 200){
-                alert('비밀번호가 수정되었습니다.');
-                router.reload()
-            }
-        }else{
-            alert('변경 비밀번호 확인이 일치하지 않습니다.')
+        if(res.data.errorMessage){
+            alert(res.data.errorMessage)
+            return
         }
-        
+        if(res.status===200){
+            alert("비밀번호가 수정되었습니다.")
+            router.reload()
+        }        
     }
     return(
         <>
