@@ -12,7 +12,6 @@ export default async function handler(
         try{
             console.log(req.body)
             const { id, password, new_password, check_password } = req.body
-            console.log('호출')
             const userPw = await db.user.findFirst({
                 where: {
                     id: id
