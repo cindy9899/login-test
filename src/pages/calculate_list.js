@@ -4,13 +4,13 @@ import Footer from "components/footer";
 import Page_menu from "components/page_menu";
 import Top from "components/top";
 
-export default function Calculate_list(){
+export default function Calculate_list({alert_show}){
     return(
         <>
             {/* <!--#include virtual="/inc/header.asp"-->
             <!--#include virtual="/inc/top.asp"--> */}
             
-            <Top/>
+            <Top alert_show={alert_show}/>
 
             <div id="content" className="container">
             {/* <!-- 페이지메뉴 --> */}

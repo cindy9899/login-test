@@ -4,13 +4,13 @@ import Page_menu from "components/page_menu";
 import Top from "components/top";
 import Link from "next/link";
 
-export default function Board_faq_list(){
+export default function Board_faq_list({alert_show}){
     return(
         <>
             {/* <!--#include virtual="/inc/header.asp"-->
             <!--#include virtual="/inc/top.asp"--> */}
 
-            <Top />
+            <Top alert_show={alert_show}/>
 
             <div id="content" className="container">
                 {/* <!-- 페이지메뉴 -->

@@ -10,7 +10,6 @@ export default async function handler(
 ){
     if(req.method === 'POST') {
         try{
-            console.log(req.body)
             const { id, password, new_password, check_password } = req.body
             const userPw = await db.user.findFirst({
                 where: {
@@ -21,8 +20,6 @@ export default async function handler(
                 }
             })
             .then(res=> res?.password)
-
-            console.log("userPw => ", userPw)
 
             // 해당 계정이 존재하지 않을 때
             if(!userPw) {
