@@ -16,4 +16,15 @@ declare module 'next-auth' {
         new_password: string;
         check_password: string;
     }
+
+    interface Myinfo {
+        new_password: string;
+        check_password: string;
+        nickname: string;
+        email: string;
+        phone: string;
+        bank: string;
+        account_num: string;
+        account_password: string;
+    }
 }

@@ -11,20 +11,45 @@ datasource db {
 }
 
 model User {
-  idx            Int       @id @default(autoincrement())
-  user_code      String    @unique
-  admin_state   Boolean  @default(false)
-  upper_company  String?
-  upper_code     String?
-  id             String    @unique
-  password       String    // 암호화 필요
-  name           String    
-  nickname       String?    @unique
-  phone          String?
-  email          String?
-  zip_code       String
-  address        String
-  detail_address String?
-  created_at     DateTime  @default(dbgenerated("Now()")) @db.DateTime
-  updated_at     DateTime  @default(dbgenerated("Now() ON UPDATE NOW()")) @db.DateTime
+  idx               Int       @id @default(autoincrement())
+  user_code         String    @unique
+  upper_company     String?
+  upper_code        String?
+  id                String    @unique
+  password          String    // 암호화 필요
+  name              String    
+  nickname          String?    @unique
+  phone             String?
+  email             String?
+  zip_code          String
+  address           String
+  detail_address    String?
+  created_at        DateTime  @default(dbgenerated("Now()")) @db.DateTime
+  updated_at        DateTime  @default(dbgenerated("Now() ON UPDATE NOW()")) @db.DateTime
+}
+
+model User_Settle_Info {
+  idx               Int       @id @default(autoincrement())
+  user_code         String    @unique // User_info user_code
+  login_state       Boolean   @default(true)
+  contract_type     Int       @default(1) // 0: 신청, 1: 정상, 2: 해지
+  fee_rate          Float     @default(0)
+  bank              String       // Bank_type 테이블과 연결
+  name              String    
+  account_num       String
+  account_password  String    //암호화 필요
+  cancel_state      Boolean   @default(true) // 결제 당일취소 여부
+  settle_cycle      Int       @default(3) // 0: 10분, 1: 1시간, 2: 1일, 3: 3일, 4: 7일
+  settle_pending    Boolean   @default(false)
+  limit_num         Int       @default(0)
+  limit_amount      Int       @default(0)
+  memo              String    
+  updated_at        DateTime  @default(dbgenerated("Now() ON UPDATE NOW()")) @db.DateTime
+}
+
+model Bank_type {
+  idx               Int       @id @default(autoincrement())
+  type              String
+  code              Int
+  name              String 
 }

@@ -30,7 +30,14 @@ export const authOptions = {
             async authorize(credentials, _req) {
                 // 유저 정보 조회
                 const userData = await db.user.findFirst({
-                    where: {id: credentials?.id}
+                    where: {id: credentials?.id},
+                    select: { 
+                        user_code: true,
+                        id: true,
+                        name: true,
+                        nickname: true,
+                        password: true
+                    }
                 });
 
                 // 비밀번호 암호화 체크
@@ -47,24 +54,9 @@ export const authOptions = {
                 return null;
             },
         }),
-        // CredentialsProvider({
-        //     id: 'two-factor-auth',
-        //     name: "Two Factor Auth",
-        //     async authorize(credentials, _req) {
-        //         const user = {
-        //             /* add function to get user */
-        //         }
-        //         return user //user
-        //     },
-        //     credentials: {
-        //         phone: { label: 'phone', type: 'text', placeholder:'전화번호' },
-        //         "2fa-key": { label: "2FA Key" }
-        //     }
-        // }),
     ],
     callbacks: {
         async jwt({token, account, user, profile}: any) {
-            // console.log('token', token)
             return token;
         },
         async session({session, token}: {session: Session; token: JWT}) {

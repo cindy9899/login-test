@@ -3,19 +3,28 @@ import Bottom_footer from "components/bottom_footer";
 import Footer from "components/footer";
 import Page_menu from "components/page_menu";
 import Top from "components/top";
+import { request } from "https";
 import Link from "next/link";
+// import something from "OkCert3Com"
 
-export default function Account_pay(){
+export default function Account_pay({alert_show}: any){
+
     return(
         <>
         {/* <!--#include virtual="/inc/header.asp"-->
         <!--#include virtual="/inc/top.asp"--> */}       
-        <Top />
+        <Top alert_show={alert_show}/>
 
     <div id="content" className="container">
     {/* <!-- 페이지메뉴 -->
     <!--#include virtual="/inc/page_menu.asp"--> */}
     <Page_menu />
+	<form name="form1">
+		<input type="hidden" name="tc" value="kcb.oknm.online.safehscert.popup.cmd.P931_CertChoiceCmd"/>
+		<input type="hidden" name="cp_cd" value="<%=CP_CD%>"/>
+		<input type="hidden" name="mdl_tkn" value="<%=MDL_TKN%>"/>
+		<input type="hidden" name="target_id" value=""/>	
+	</form>
 
     <section className="simplepay_box">
         <form onSubmit={(e) => e.preventDefault()} className="simplepay">
@@ -37,14 +46,16 @@ export default function Account_pay(){
                         </li>
 					</ul>
 
-					<ul className="confirm_box">
+					<p>인증 완료</p>
+
+					{/* <ul className="confirm_box">
 						<li>
                             <input type="text" className="input"  placeholder="인증번호 입력"/>
                         </li>
 						<li className="confirm_bt">
                             <button className="bt"  onClick={() => {}}>확인</button>
                         </li>
-					</ul>
+					</ul> */}
 
 					<ul className="email_confirm">
 						<li>

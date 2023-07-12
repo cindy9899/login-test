@@ -1,16 +1,16 @@
 import Link from 'next/link';
-import Top from '../components/top';
-import Page_menu from '../components/page_menu';
-import Bottom_footer from '../components/bottom_footer';
-import Footer from '../components/footer';
+import Top from 'components/top';
+import Page_menu from 'components/page_menu';
+import Bottom_footer from 'components/bottom_footer';
+import Footer from 'components/footer';
 
-export default function Main(){    
+export default function Main({alert_show}){    
     return (    
         <>
             {/* <!--#include virtual="/inc/header.asp"-->
             <!--#include virtual="/inc/top.asp"--> */}
 
-            <Top/>               
+            <Top alert_show={alert_show}/>               
             
             <div id="content" className="container">
             {/* 페이지메뉴 */}

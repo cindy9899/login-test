@@ -3,7 +3,7 @@ import Top_pc from './top_pc';
 import { useEffect, useState } from 'react';
 
 /* eslint-disable @next/next/no-img-element */
-export default function Top() {
+export default function Top({alert_show}) {
     // 현재 화면 너비값
     const get_resize =
         (typeof window !== 'undefined' && localStorage.getItem('top_resize')) ||
@@ -30,5 +30,5 @@ export default function Top() {
         setResize(window.innerWidth);
     };
 
-    return <>{mounted && resize > 993 ? <Top_pc /> : <Top_mobile />}</>;
+    return <>{mounted && resize > 993 ? <Top_pc alert_show={alert_show}/> : <Top_mobile />}</>;
 }
