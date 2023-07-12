@@ -1,10 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { signOut } from 'next-auth/react';
 import Link from 'next/link';
+import UserCheck from './userCheck';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-export default function Top_pc() {
+const base = process.env.NEXT_PUBLIC_API_HOST;
+
+export default function Top_pc({alert_show}) {
     const [active, setActive] = useState('gnb_memu');
     const router = useRouter()
 
@@ -164,8 +167,17 @@ export default function Top_pc() {
                                     onMouseOver={() => setActive('myinfo')}
                                 >
                                     <Link
-                                        href="/myinfo/myinfo"
+                                        // href="/myinfo/myinfo"
+                                        href=""
                                         className="nav_link"
+                                        id=""
+                                        onClick={()=>{
+                                            const url = window.location.href
+                                            if(url !== base+'/myinfo/myinfo'){
+                                                alert_show('userCheck_pupup');
+                                                return false;
+                                            }
+                                        }}
                                     >
                                         정보수정
                                     </Link>
@@ -197,6 +209,7 @@ export default function Top_pc() {
                     </div>
                 </div>
             </div>
+            <UserCheck />
         </>
     );
 }
